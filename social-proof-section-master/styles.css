@@ -1,0 +1,128 @@
+@font-face {
+    font-family: RemoraSansW1-MediumItalic;
+    src: url("/fonts/G-Type\ -\ RemoraSansW1-MediumItalic.otf");
+}
+
+@font-face {
+    font-family: RemoraSansW5-MediumItalic;
+    src: url("/fonts/G-Type\ -\ RemoraSansW5-MediumItalic.otf");
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: RemoraSansW1-MediumItalic;
+  }
+  h1,h2,h3,h4,h5,p{
+    margin: 0;
+  }
+
+  .container{
+    width: 992px;
+    margin: 50px auto;
+  }
+  .row{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 0 10px;
+  }
+  .col-3{
+    flex-basis: calc(92%/4);
+  }
+  .col-4{
+    flex-basis: calc(94%/3);
+  }
+  .col-6{
+    flex-basis: calc(96%/2);
+  }
+  .col-8{
+    flex-basis: 61%;
+  }
+  .col-10{
+    flex-basis: 83%;
+  }
+  .col-12{
+  /*   background: #eee; */
+    flex-basis: 100%;
+  }
+  .ratings{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .rating-wrapper{
+    background-color: hsl(290deg 30% 96%);
+    padding: 15px 25px;
+    border-radius: 10px;
+  }
+  .rating-wrapper:nth-child(2){
+    margin-left: 25px;
+  }
+  .rating-wrapper:nth-child(3){
+    margin-left: 50px;
+  }
+  .review-wrapper{
+    background: #512050;
+    padding: 50px 25px;
+    border-radius: 10px;
+  }
+  .reviews .col-4:nth-child(2){
+    margin-top: 15px;
+  }
+  .reviews .col-4:nth-child(3){
+    margin-top: 30px;
+  }
+
+  .author-text, .author-name{
+    color: #ece0ec;
+  }
+
+  .author-title {
+    font-weight: 700;
+    color: #a7558c;
+  }
+  .author-img{
+    height: 50px;
+    width: 50px;
+  }
+  .round{
+    border-radius: 100px;
+  }
+
+  .gold-star {
+    color: #f2984a;
+  }
+
+  .heading {
+    color: #512050;
+  }
+
+  @media only screen and (max-width: 992px) {
+    body{
+      margin: 15px 15px;
+    }
+    .container{
+      width: 100%;
+      margin: 0;
+    }
+    .rating-wrapper .row{
+      justify-content: center;
+    }
+    .rating-wrapper .rating-text{
+      text-align: center;
+    }
+    .rating-wrapper:nth-child(2), .rating-wrapper:nth-child(3){
+      margin: 0;
+    }
+    .reviews, .reviews .col-4:nth-child(2), .reviews .col-4:nth-child(3){
+      margin-top: 10px;
+    }
+    .reviews .review-wrapper .col-4{
+      flex-basis: 0;
+    }
+    .reviews .review-wrapper .col-8{
+      flex-basis: 61%;
+    }
+    .col-3, .col-4, .col-6, .col-8, .col-10{
+      flex: 100%;
+    }
+  }
